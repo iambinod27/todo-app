@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  background-color: #161620;
+  color: #64667b;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+section {
+  header {
+    background: url("../images/bg-mobile-dark.jpg");
+    height: 200px;
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      height: 100%;
+      padding-top: 3rem;
+      .logo {
+        font-size: 2rem;
+        letter-spacing: 5px;
+        color: #fff;
+      }
+    }
+  }
+
+  .container {
+    article {
+      .todo-input {
+        width: 25rem;
+        position: absolute;
+        top: 110px;
+        left: 50px;
+        z-index: 999;
+
+        input {
+          padding: 1rem;
+          min-width: 100%;
+          background-color: #25273c;
+          border: none;
+          border-radius: 5px;
+          color: #fff;
+
+          &::placeholder {
+            color: #64667b;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .grid-container {
+        position: absolute;
+        top: 175px;
+        left: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        gap: 1rem;
+        z-index: 999;
+      }
+
+      .todo-list {
+        width: 25rem;
+        border-radius: 5px;
+        background-color: #25273c;
+
+        .todo {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid #36384d;
+          height: 50px;
+          padding: 0 1rem;
+          align-items: center;
+
+          .todo-info {
+            display: flex;
+            align-items: center;
+          }
+
+          .checkmark {
+            border: 1px solid hsl(236, 9%, 61%);
+            border-radius: 100%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+
+            .done {
+              display: none;
+              max-width: 15px;
+              min-height: 15px;
+
+              cursor: pointer;
+            }
+          }
+
+          .remove {
+            max-width: 15px;
+            min-height: 15px;
+            cursor: pointer;
+          }
+        }
+
+        .todo-status {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 1rem;
+          height: 50px;
+
+          .clear {
+            cursor: pointer;
+
+            &:hover {
+              color: #e4e5f1;
+            }
+          }
+        }
+      }
+
+      .todo-all {
+        width: 25rem;
+        border-radius: 5px;
+        background-color: #25273c;
+
+        ul {
+          display: flex;
+          height: 50px;
+          justify-content: center;
+          align-items: center;
+
+          li {
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+  }
+}

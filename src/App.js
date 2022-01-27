@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import TodoList from "./components/TodoList";
+import sun from "./images/icon-sun.svg";
+import "./styles/styles.scss";
+import { TodoProvider } from "./context/TodoContext";
+import AddTodo from "./components/AddTodo";
+import TodoStatus from "./components/TodoStatus";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TodoProvider>
+      <section>
+        <header>
+          <div className="container">
+            <div className="logo">TODO</div>
+            <img src={sun} alt="" className="dark light" />
+          </div>
+        </header>
+        <div className="container">
+          <article>
+            <AddTodo />
+
+            <div className="grid-container">
+              <div className="todo-list">
+                <TodoList />
+                <TodoStatus />
+              </div>
+
+              <div className="grid-item">
+                <div className="todo-all">
+                  <ul>
+                    <li className="all">All</li>
+                    <li className="active">Active</li>
+                    <li className="completed">Completed</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </TodoProvider>
   );
 }
 
