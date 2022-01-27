@@ -18,6 +18,12 @@ const TodoList = () => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
   }, [todos]);
 
+  const removeItem = (id) => {
+    const newTodos = todos.filter((item) => item.id !== id);
+
+    setTodos(newTodos);
+  };
+
   return (
     <>
       {todos.map((todo) => (
@@ -28,7 +34,12 @@ const TodoList = () => {
             </div>
             <p className="todo-work">{todo.todo}</p>
           </div>
-          <img src={remove} alt="" className="remove" />
+          <img
+            src={remove}
+            alt=""
+            className="remove"
+            onClick={() => removeItem(todo.id)}
+          />
         </div>
       ))}
     </>

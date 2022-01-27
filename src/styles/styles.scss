@@ -102,6 +102,7 @@ section {
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
             margin-right: 10px;
 
             .done {
@@ -133,23 +134,6 @@ section {
             &:hover {
               color: #e4e5f1;
             }
-          }
-        }
-      }
-
-      .todo-all {
-        width: 25rem;
-        border-radius: 5px;
-        background-color: #25273c;
-
-        ul {
-          display: flex;
-          height: 50px;
-          justify-content: center;
-          align-items: center;
-
-          li {
-            margin: 0 10px;
           }
         }
       }

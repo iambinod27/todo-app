@@ -25,16 +25,6 @@ function App() {
                 <TodoList />
                 <TodoStatus />
               </div>
-
-              <div className="grid-item">
-                <div className="todo-all">
-                  <ul>
-                    <li className="all">All</li>
-                    <li className="active">Active</li>
-                    <li className="completed">Completed</li>
-                  </ul>
-                </div>
-              </div>
             </div>
           </article>
         </div>
