@@ -92,13 +92,17 @@ section {
           .todo-info {
             display: flex;
             align-items: center;
+
+            .todo-work {
+              text-decoration: line-through;
+            }
           }
 
           .checkmark {
             border: 1px solid hsl(236, 9%, 61%);
             border-radius: 100%;
-            width: 25px;
-            height: 25px;
+            width: 30px;
+            height: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -106,10 +110,15 @@ section {
             margin-right: 10px;
 
             .done {
-              display: none;
-              max-width: 15px;
-              min-height: 15px;
+              display: block;
+              max-width: 25px;
+              min-height: 25px;
+              cursor: pointer;
+              border-radius: 100%;
+            }
 
+            .un-done {
+              display: none;
               cursor: pointer;
             }
           }

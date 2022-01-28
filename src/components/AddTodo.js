@@ -17,7 +17,7 @@ const AddTodo = () => {
     } else {
       setTodos((prevTodo) => [
         ...prevTodo,
-        { id: new Date().getSeconds().toString(), todo: work },
+        { id: new Date().getSeconds().toString(), todo: work, done: false },
       ]);
       setWork("");
     }
