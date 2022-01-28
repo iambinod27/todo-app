@@ -1,22 +1,17 @@
 import React from "react";
 import TodoList from "./components/TodoList";
-import sun from "./images/icon-sun.svg";
 import "./styles/styles.scss";
 import { TodoProvider } from "./context/TodoContext";
 import AddTodo from "./components/AddTodo";
 import TodoStatus from "./components/TodoStatus";
+import Header from "./components/Header";
 
 function App() {
   return (
     <TodoProvider>
       <section>
-        <header>
-          <div className="container">
-            <div className="logo">TODO</div>
-            <img src={sun} alt="" className="dark light" />
-          </div>
-        </header>
-        <div className="container">
+        <Header />
+        <div className="article-container">
           <article>
             <AddTodo />
 

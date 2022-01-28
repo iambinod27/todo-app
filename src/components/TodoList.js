@@ -7,8 +7,6 @@ const TodoList = () => {
   const LOCAL_STORAGE_KEY = "todos";
   const [todos, setTodos] = useContext(TodoContext);
 
-  const [check, setCheck] = useState("un-done");
-
   useEffect(() => {
     const retriveTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     if (retriveTodos) {
@@ -24,16 +22,6 @@ const TodoList = () => {
     const newTodos = todos.filter((item) => item.id !== id);
 
     setTodos(newTodos);
-  };
-
-  const removeDone = (id) => {
-    const newTodos = todos.filter((item) => {
-      if (item.done === true) {
-        removeItem(id);
-      }
-
-      return newTodos;
-    });
   };
 
   const checkItem = (id) => {
