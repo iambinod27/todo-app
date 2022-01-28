@@ -39,8 +39,6 @@ const TodoList = () => {
     );
   };
 
-  const clearDone = (id) => {};
-
   return (
     <>
       {todos.map((todo) => (

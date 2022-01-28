@@ -9,7 +9,7 @@ import Header from "./components/Header";
 function App() {
   return (
     <TodoProvider>
-      <section>
+      <section className="dark">
         <Header />
         <div className="article-container">
           <article>
